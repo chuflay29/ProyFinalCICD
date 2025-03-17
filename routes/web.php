@@ -63,5 +63,10 @@ Route::group(
         Route::get('/empleados/creacion', 'App\Http\Controllers\EmpleadoController@create')->name('empleados.create');
         Route::post('/empleados/store', 'App\Http\Controllers\EmpleadoController@store')->name('empleados.store');
 
+        //Productos
+        Route::get('/productos', 'App\Http\Controllers\ProductoController@index')->name('productos.index');
+        Route::get('/productos/creacion', 'App\Http\Controllers\ProductoController@create')->name('productos.create');
+        Route::post('/productos/store', 'App\Http\Controllers\ProductoController@store')->name('productos.store');
+
     }
 );
