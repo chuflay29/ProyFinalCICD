@@ -34,6 +34,11 @@
                     <span class="nav-text">- Vehículos</span>
                 </a>
             </li>
+            <li><a href="{{ route('productos.index') }}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-user-1"></i>
+                    <span class="nav-text">- Productos</span>
+                </a>
+            </li>
             <li><a href="{!! url('/usuarios') !!}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-user-1"></i>
                     <span class="nav-text">- Usuarios</span>
