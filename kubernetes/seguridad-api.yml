@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-web-deployment
+  labels:
+    app: app-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-web
+  template:
+    metadata:
+      labels:
+        app: app-web
+    spec:
+      containers:
+      - name: apache-php
+        image: registrymodulocicd.azurecr.io/modulocicd:latest
+        ports:
+        - containerPort: 80
+        # env:
+      imagePullSecrets:
+      - name: my-delta-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-web-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: app-web
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 80
+      nodePort: 30200
