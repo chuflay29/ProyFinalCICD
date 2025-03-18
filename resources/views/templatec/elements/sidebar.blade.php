@@ -10,12 +10,6 @@
                 </a>
             </li>
 
-            {{-- <li><a href="{!! url('/diagnostico-redes'); !!}" class="ai-icon" aria-expanded="false">
-            <i class="flaticon-381-bookmark-1"></i>
-            <span class="nav-text">- Diagnosticos</span>
-            </a>
-        </li> --}}
-
             <li><a href="{!! url('/clientes') !!}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-user-1"></i>
                     <span class="nav-text">- Clientes</span>
@@ -28,22 +22,16 @@
                 </a>
             </li>
 
-            <li><a href="{{ route('vehiculos.create') }}" class="ai-icon" aria-expanded="false">
-
-                    <i class="flaticon-381-bookmark-1"></i>
-                    <span class="nav-text">- Vehículos</span>
-                </a>
-            </li>
             <li><a href="{{ route('productos.index') }}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-user-1"></i>
                     <span class="nav-text">- Productos</span>
                 </a>
             </li>
-            <li><a href="{!! url('/usuarios') !!}" class="ai-icon" aria-expanded="false">
+            {{-- <li><a href="{!! url('/usuarios') !!}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-user-1"></i>
                     <span class="nav-text">- Usuarios</span>
                 </a>
-            </li>
+            </li>--}}
         </ul>
     </div>
 </div>
