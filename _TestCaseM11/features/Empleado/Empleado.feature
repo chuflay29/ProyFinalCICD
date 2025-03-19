@@ -1,4 +1,4 @@
-Feature: Gestion de Clientes
+Feature: Gestion de Empleados
 
   Background:
     Given Usuario se ha loggeado en el sistema
