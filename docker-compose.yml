@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: imagentest:latest # Nombre de la imagen para el servicio web
+    container_name: php_apache
+    restart: unless-stopped
+    ports:
+      - "3500:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APACHE_RUN_USER=#33
+      - APACHE_RUN_GROUP=#33
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.mysql
+    image: mysql_db:latest # Nombre de la imagen para el servicio MySQL
+    container_name: mysql_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: Delta123#
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

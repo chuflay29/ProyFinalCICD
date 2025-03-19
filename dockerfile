@@ -1,4 +1,3 @@
-# dockerfile para crear la imagen en docker
 # Usar la imagen oficial de PHP 8.0 con Apache
 FROM php:8.0-apache
 
