@@ -1,7 +1,7 @@
 services:
   apache_php:
    build:
-    context: ./webapp/
+    context: ../
     dockerfile: dockerfile
    image: apache-php-cicd:8.0
    container_name: apache_php
