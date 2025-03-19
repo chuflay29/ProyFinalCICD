@@ -1,0 +1,28 @@
+services:
+  apache_php:
+   build:
+    context: ./webapp/
+    dockerfile: dockerfile
+   image: apache-php-cicd:8.0
+   container_name: apache_php
+   ports:
+    - 8081:80
+
+  mysql:
+   build:
+    context: ./mysql/
+    dockerfile: Dockerfile
+   image: mysql-cicd:8.0
+   container_name: mysql
+   environment:
+    MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    MYSQL_DATABASE: ${DB_DATABASE}
+    MYSQL_USER: ${DB_USERNAME}
+    MYSQL_PASSWORD: ${DB_PASSWORD}
+   ports:
+    - 3306:3306
+   volumes:
+    - mysql-data-volume:/var/lib/mysql
+
+volumes:
+ mysql-data-volume:
