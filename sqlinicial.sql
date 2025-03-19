@@ -326,3 +326,12 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2025-03-14 23:33:35
+
+CREATE TABLE productos (
+  id bigint(20) UNSIGNED NOT NULL,
+  nombre varchar(255) NOT NULL,
+  descripcion text DEFAULT NULL,
+  precio decimal(10,2) NOT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
