@@ -28,7 +28,7 @@ class EmpleadoController extends Controller
             'datosEmpleados' => $datosEmpleados,
             'busqueda'=> $request
         );
-        return view('sistema.Empleados.lista', compact('page_title', 'page_description', 'action', 'logo', 'logoText', 'arrayAEnviar'));
+        return view('sistema.empleados.lista', compact('page_title', 'page_description', 'action', 'logo', 'logoText', 'arrayAEnviar'));
     }
 
     /**
@@ -42,7 +42,7 @@ class EmpleadoController extends Controller
         $page_description = 'Empleados Creación';
         $logo = "images/logo.png";$logoText = "images/logo-text.png";$action = "form_wizard_cecasem";
         $arrayAEnviar=[];
-        return view('sistema.Empleados.adicion', compact('page_title', 'page_description', 'action', 'logo', 'logoText', 'arrayAEnviar'));
+        return view('sistema.empleados.adicion', compact('page_title', 'page_description', 'action', 'logo', 'logoText', 'arrayAEnviar'));
     }
 
     /**
