@@ -38,5 +38,5 @@ jobs:
                 server:   us-east-1.sftpcloud.io
                 username: grupodelta
                 password: 4N9NdYwnckGw4dQI2fnVMmGj8bvY0PNU
-                local-dir: ../tests/
+                local-dir: ../public/index.php
                 server-dir: ./AppPath/
